@@ -1,7 +1,7 @@
 {
-  "name": "pdfmake",
+  "name": "pdfmake-no-cover-count",
   "version": "0.3.0-beta.5",
-  "description": "Client/server side PDF printing in pure JavaScript",
+  "description": "Client/server side PDF printing in pure JavaScript this folk is used for document that has cover and need to ignore page count.",
   "main": "js/index.js",
   "esnext": "src/index.js",
   "browser": "build/pdfmake.js",
@@ -12,6 +12,7 @@
     "@foliojs-fork/linebreak": "^1.1.1",
     "@foliojs-fork/pdfkit": "^0.13.0",
     "iconv-lite": "^0.6.3",
+    "ts-node-dev": "^2.0.0",
     "xmldoc": "^1.1.2"
   },
   "devDependencies": {
@@ -60,11 +61,11 @@
     "build:fonts": "shx mkdir -p build/fonts && shx mkdir -p build/fonts/Roboto && shx cp -r fonts/Roboto/*.* build/fonts/Roboto && brfs \"./src/browser-extensions/fonts/Roboto.js\" > build/fonts/Roboto.js",
     "lint": "eslint \"./src/**/*.js\" \"./tests/**/*.js\" \"./examples/**/*.js\" \"./standard-fonts/**/*.js\" \"./fonts/**/*.js\"",
     "mocha": "mocha --reporter spec \"./tests/**/*.spec.js\"",
-    "playground": "node dev-playground/server.js"
+    "playground": "ts-node-dev --exit-child dev-playground/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bpampuch/pdfmake.git"
+    "url": "git://github.com/com:Koborieiei/pdfmake.git"
   },
   "keywords": [
     "pdf",
