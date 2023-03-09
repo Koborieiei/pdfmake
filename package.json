@@ -1,6 +1,6 @@
 {
   "name": "pdfmake-no-cover-count",
-  "version": "0.3.0-beta.5",
+  "version": "0.3.0-beta.6",
   "description": "Client/server side PDF printing in pure JavaScript this folk is used for document that has cover and need to ignore page count.",
   "main": "js/index.js",
   "esnext": "src/index.js",
