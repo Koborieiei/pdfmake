@@ -243,7 +243,7 @@ class DocumentContext extends EventEmitter {
 		let innerWidth = pageSize.width - this.pageMargins.left - this.pageMargins.right;
 
 		return {
-			pageNumber: this.page + 1,
+			pageNumber: this.page - 1,
 			pageOrientation: pageSize.orientation,
 			pageInnerHeight: innerHeight,
 			pageInnerWidth: innerWidth,
