@@ -22,7 +22,7 @@ module.exports = {
 	target: ['web', 'es5'], // For Internet Explorer 11 support
 	resolve: {
 		alias: {
-			fs: path.join(__dirname, './src/browser-extensions/virtual-fs-cjs.js')
+			fs: path.join(__dirname, './src/browser-extensions/virtual-fs.js')
 		},
 		fallback: {
 			crypto: false,
@@ -35,31 +35,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				enforce: 'pre',
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: [
-							[
-								"@babel/preset-env",
-								{
-									targets: {
-										"ie": "11"
-									},
-									modules: false,
-									useBuiltIns: 'usage',
-									// TODO: after fix in babel remove corejs version and remove core-js dependency in package.json
-									corejs: "3.0.0",
-									loose: true
-								}
-							]
-						]
-					}
-				}
-			},
 			// for fs don't use babel _interopDefault command
 			{
 				enforce: 'pre',
@@ -112,6 +87,7 @@ module.exports = {
 					},
 				}
 			},
+
 			/* temporary bugfix for FileSaver: added hack for mobile device support, see https://github.com/bpampuch/pdfmake/issues/1664 */
 			/* waiting to merge and release PR https://github.com/eligrey/FileSaver.js/pull/533 */
 			{

@@ -5,10 +5,7 @@
     "Bartek Pampuch <bartosz.pampuch@gmail.com>"
   ],
   "description": "Client/server side PDF printing in pure JavaScript",
-  "main": [
-    "build/pdfmake.js",
-    "build/vfs_fonts.js"
-  ],
+  "main": ["build/pdfmake.js", "build/vfs_fonts.js"],
   "moduleType": [
     "globals"
   ],
@@ -23,6 +20,7 @@
     "**/.*",
     "dev-playground",
     "webpack.config.js",
+    "webpack-standardfonts.config.js",
     "README.md",
     "bower.json",
     "examples",
@@ -33,8 +31,6 @@
     "yarn.lock",
     "composer.json",
     ".github",
-    "build-fonts.js",
-    "build-examples.js",
-    "babel.config.json"
+    "build-examples.js"
   ]
 }
